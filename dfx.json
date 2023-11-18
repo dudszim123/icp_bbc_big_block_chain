@@ -1,0 +1,28 @@
+{
+  "canisters": {
+    "hello_backend": {
+      "main": "src/hello_backend/main.mo",
+      "type": "motoko"
+    },
+    "hello_frontend": {
+      "dependencies": [
+        "hello_backend"
+      ],
+      "hello_frontend":{
+        "entrypoint": "src/hello_frontend/assets/index.html"
+      },
+      "source": [
+        "src/hello_frontend/assets"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
